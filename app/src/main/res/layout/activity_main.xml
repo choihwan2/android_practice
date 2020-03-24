@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A6882D"
+            android:text="Android 예제 입니다."
+            android:gravity="center_horizontal"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01. LinearLayout"
+            android:id="@+id/_01_linearBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="02. Widget"
+            android:id="@+id/_02_widgetBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="03. Event"
+            android:id="@+id/_03_eventBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="04. ActivityEvent"
+            android:id="@+id/_04_activityEventBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="05. SwipeEvent"
+            android:id="@+id/_05_swipeEventBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="06. DataSendActivity"
+            android:id="@+id/_06_dataSendBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="07. DateSend2Activity"
+            android:id="@+id/_07_dataSendBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="08. ANRActivity"
+            android:id="@+id/_08_ANRBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="09. Counter Log Activity"
+            android:id="@+id/_09_countBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10. Counter Progress Activity"
+            android:id="@+id/_10_countProgressBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11. Counter Handler Activity"
+            android:id="@+id/_11_countHandlerBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12. Search Book Activity"
+            android:id="@+id/_12_searchBookBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13. Book Detail Activity"
+            android:id="@+id/_13_bookDetailBtn"/>
+    </LinearLayout>
+</ScrollView>
