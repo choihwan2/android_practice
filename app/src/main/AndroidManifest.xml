@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".BookDetailActivity"></activity>
+        <activity android:name=".Example14_ItemBookActivity"></activity>
+        <activity android:name=".BookDetailActivity" />
         <activity android:name=".Example13_BookDetailActivity" />
         <activity android:name=".Example12_SearchBookActivity" />
         <activity android:name=".Example11_CountHandlerActivity" />

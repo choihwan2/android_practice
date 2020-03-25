@@ -83,5 +83,11 @@
             android:layout_height="wrap_content"
             android:text="13. Book Detail Activity"
             android:id="@+id/_13_bookDetailBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14. Item Book Activity"
+            android:id="@+id/_14_itemBookBtn"/>
     </LinearLayout>
 </ScrollView>

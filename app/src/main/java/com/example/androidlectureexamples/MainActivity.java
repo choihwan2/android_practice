@@ -214,6 +214,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn14 = findViewById(R.id._14_itemBookBtn);
+        btn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                ComponentName cName = new ComponentName(pkg,pkg + ".Example14_ItemBookActivity");
+                intent.setComponent(cName);
+                // 새로 생성되는 activity 로부터 데이터를 받아오기 위한 요옫
+                // 두번째 activity 가 finish 되는 순간 데이터를 받아와요!
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
