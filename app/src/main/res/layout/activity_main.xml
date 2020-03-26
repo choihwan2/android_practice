@@ -89,5 +89,17 @@
             android:layout_height="wrap_content"
             android:text="14. Item Book Activity"
             android:id="@+id/_14_itemBookBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15. Implicit Intent Activity"
+            android:id="@+id/_15_implicitIntentBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="16. Service Lifecycle"
+            android:id="@+id/_16_serviceBtn"/>
+
     </LinearLayout>
 </ScrollView>

@@ -12,7 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Example14_ItemBookActivity"></activity>
+        <service
+            android:name=".Example15Sub_LifeCycleService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".Example16_ServiceLifeCycleActivity" />
+        <activity android:name=".Example15_ImplicitInetentActivity">
+            <intent-filter>
+                <action android:name="MY_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="INTENT_TEST" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Example14_ItemBookActivity" />
         <activity android:name=".BookDetailActivity" />
         <activity android:name=".Example13_BookDetailActivity" />
         <activity android:name=".Example12_SearchBookActivity" />

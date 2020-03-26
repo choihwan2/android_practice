@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -219,11 +220,43 @@ public class MainActivity extends AppCompatActivity {
         btn14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Explicit Intent( 명시적 인텐트) 내가 뭘 쓸지 써놨다.
                 Intent intent = new Intent();
                 ComponentName cName = new ComponentName(pkg,pkg + ".Example14_ItemBookActivity");
                 intent.setComponent(cName);
                 // 새로 생성되는 activity 로부터 데이터를 받아오기 위한 요옫
                 // 두번째 activity 가 finish 되는 순간 데이터를 받아와요!
+                startActivity(intent);
+            }
+        });
+        Button btn15 = findViewById(R.id._15_implicitIntentBtn);
+        btn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // implicit Intent (묵시적 인텐트)
+                // 방금 생성한 Activity 를 호출한다!
+                Intent intent = new Intent();
+                intent.setAction("MY_ACTION");
+                intent.addCategory("INTENT_TEST");
+                startActivity(intent);
+            }
+        });
+
+        /*
+        App 이 실행 되었다고 해서 항상 Activity 가 보이는건 아니에요! 대표적인 경우 카톡, 멜론...
+        한마디로 서비스는 화면이 없는 Activity 다!
+        Activity 는 onCreate() -> onStart() -> onResume() -> onPuase() -> onStop() -> onDestroy();
+        Service 는 onCreate() -> onStartCommand() -> onDestroy()
+        눈에 보이지 않기 때문에 (Background) 에서 로직 처리하는데 많이 이용된다.
+
+         */
+
+        Button btn16 = findViewById(R.id._16_serviceBtn);
+        btn16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Example16_ServiceLifeCycleActivity.class);
                 startActivity(intent);
             }
         });
