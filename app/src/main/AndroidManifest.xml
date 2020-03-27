@@ -13,9 +13,23 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <service
-            android:name=".Example15Sub_LifeCycleService"
+            android:name=".Example18Sub_KAKAOBookSearchService"
             android:enabled="true"
             android:exported="true"></service>
+
+        <activity android:name=".Example18_KakaoBookSerachActivity" />
+
+        <service
+            android:name=".Example17_Sub_Service"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Example17_ServiceDataActivity" />
+
+        <service
+            android:name=".Example15Sub_LifeCycleService"
+            android:enabled="true"
+            android:exported="true" />
 
         <activity android:name=".Example16_ServiceLifeCycleActivity" />
         <activity android:name=".Example15_ImplicitInetentActivity">

@@ -260,6 +260,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btn17 = findViewById(R.id._17_serviceDataBtn);
+        btn17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Example17_ServiceDataActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn18 = findViewById(R.id._18_kakaoBookBtn);
+        btn18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Example18_KakaoBookSerachActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

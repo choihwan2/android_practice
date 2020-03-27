@@ -101,5 +101,17 @@
             android:text="16. Service Lifecycle"
             android:id="@+id/_16_serviceBtn"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="17. Activity and Service DataPass"
+            android:id="@+id/_17_serviceDataBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18. KAKAO BOOK SEARCH"
+            android:id="@+id/_18_kakaoBookBtn"/>
+
     </LinearLayout>
 </ScrollView>
