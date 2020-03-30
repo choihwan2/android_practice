@@ -1,8 +1,10 @@
 package com.example.androidlectureexamples;
 
+import android.app.Application;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -12,7 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
@@ -74,8 +75,7 @@ class KakaoBookSearchRunnable implements Runnable {
             // 3. 접속을 하기 전에 여러가지 설정이 들어가야한다.
             // 대표적인 설정이 호출방식(GET,POST), 인증에 대한 처리
             con.setRequestMethod("GET");
-            con.setRequestProperty("Authorization", "KakaoAK c3cb5ca779fcd833f912ecc13b2de0bc");
-
+            con.setRequestProperty("Authorization", "KakaoAK " + context.getApplicationContext().getString(R.string.kakao_key));
             // 일단 접속 성공 (정상적으로 처리가 되면)
             // 접속이 성공하면 결과 데이터를 JSON으로 보내주게 되고
             // 해당 데이터를 읽어와야 해요!
@@ -97,6 +97,7 @@ class KakaoBookSearchRunnable implements Runnable {
                 // JSON 을 처리해서 documents 라고 되어있는 key 값에 대해
                 // value 값을 객체화 해서 가지고 올거에요!!
                 // JACKSON library 을 이용해서 처리
+                Log.i("BOOK","하하");
                 ObjectMapper mapper = new ObjectMapper();
                 Map<String, Object> map = mapper.readValue(sb.toString(),
                         new TypeReference<Map<String, Object>>() {
@@ -117,7 +118,7 @@ class KakaoBookSearchRunnable implements Runnable {
                     resultData.add(book.getTitle());
                 }
 
-                Intent intent = new Intent(context.getApplicationContext(),Example18_KakaoBookSerachActivity.class);
+                Intent intent = new Intent(context.getApplicationContext(), Example18_KakaoBookSearchActivity.class);
                 intent.putExtra("BOOKRESULT",resultData);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

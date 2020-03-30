@@ -12,7 +12,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Example18_KakaoBookSerachActivity extends AppCompatActivity {
+public class Example18_KakaoBookSearchActivity extends AppCompatActivity {
 
     ListView listView;
     @Override
