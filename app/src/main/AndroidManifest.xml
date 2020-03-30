@@ -15,8 +15,11 @@
         <service
             android:name=".Example18Sub_KAKAOBookSearchService"
             android:enabled="true"
-            android:exported="true"></service>
-
+            android:exported="true" />
+        <service
+            android:name=".Example18Sub_KAKAOBookSearchService2"
+            android:enabled="true"
+            android:exported="true" />
         <activity android:name=".Example18_KakaoBookSearchActivity" />
 
         <service

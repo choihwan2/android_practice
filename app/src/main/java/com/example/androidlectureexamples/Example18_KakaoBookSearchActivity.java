@@ -28,7 +28,7 @@ public class Example18_KakaoBookSearchActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Example18Sub_KAKAOBookSearchService.class);
+                Intent intent = new Intent(getApplicationContext(),Example18Sub_KAKAOBookSearchService2.class);
                 intent.putExtra("KEYWORD",editText.getText().toString());
                 startService(intent);
             }
