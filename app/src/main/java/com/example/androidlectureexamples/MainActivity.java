@@ -274,6 +274,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn19 = findViewById(R.id._19_broadCasterBtn);
+        btn19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example19_BroadCasterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn20 = findViewById(R.id._20_Btn);
+        btn20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example20_BRSMSActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn21 = findViewById(R.id._21_Btn);
+        btn21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example21_BRNotificationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

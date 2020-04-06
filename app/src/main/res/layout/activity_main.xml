@@ -113,5 +113,22 @@
             android:text="18. KAKAO BOOK SEARCH"
             android:id="@+id/_18_kakaoBookBtn"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19. Broad Caster Activity"
+            android:id="@+id/_19_broadCasterBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20. Broadcast SMS"
+            android:id="@+id/_20_Btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21. Broadcast Notification"
+            android:id="@+id/_21_Btn"/>
+
     </LinearLayout>
 </ScrollView>

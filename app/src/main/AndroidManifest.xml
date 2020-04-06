@@ -3,6 +3,7 @@
     package="com.example.androidlectureexamples">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Example21_BRNotificationActivity"></activity>
+
+        <receiver
+            android:name=".Example20Sub_SMSBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Example20_BRSMSActivity" />
+        <activity android:name=".Example19_BroadCasterActivity" />
+
         <service
             android:name=".Example18Sub_KAKAOBookSearchService"
             android:enabled="true"
@@ -20,6 +35,7 @@
             android:name=".Example18Sub_KAKAOBookSearchService2"
             android:enabled="true"
             android:exported="true" />
+
         <activity android:name=".Example18_KakaoBookSearchActivity" />
 
         <service
