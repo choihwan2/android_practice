@@ -130,5 +130,10 @@
             android:text="21. Broadcast Notification"
             android:id="@+id/_21_Btn"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="22. SQLite Activity"
+            android:id="@+id/_22_Btn"/>
     </LinearLayout>
 </ScrollView>
