@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <permission android:name="com.exam.person.provider.READ_DATABASE"
+        android:protectionLevel="normal"/>
+    <permission android:name="com.exam.person.provider.WRITE_DATABASE"
+        android:protectionLevel="normal"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +17,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Example22_SQLiteActivity"></activity>
+        <provider
+            android:name=".Example24Sub_PersonContentProvider"
+            android:authorities="com.exam.person.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.exam.person.provider.READ_DATABASE"
+            android:writePermission="com.exam.person.provider.WRITE_DATABASE"/>
+
+        <activity android:name=".Example24_ContentProviderActivity" />
+        <activity android:name=".Example23_SQLiteHelperActivity" />
+        <activity android:name=".Example22_SQLiteActivity" />
         <activity android:name=".Example21_BRNotificationActivity" />
 
         <receiver

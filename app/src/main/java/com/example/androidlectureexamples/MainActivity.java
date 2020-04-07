@@ -310,6 +310,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn23 = findViewById(R.id._23_Btn);
+        btn23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example23_SQLiteHelperActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn24 = findViewById(R.id._24_Btn);
+        btn24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example24_ContentProviderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

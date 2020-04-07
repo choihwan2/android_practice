@@ -135,5 +135,16 @@
             android:layout_height="wrap_content"
             android:text="22. SQLite Activity"
             android:id="@+id/_22_Btn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="23. SQLite Helper Activity"
+            android:id="@+id/_23_Btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24. Content Provider Activity"
+            android:id="@+id/_24_Btn"/>
     </LinearLayout>
 </ScrollView>
