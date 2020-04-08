@@ -54,7 +54,16 @@ public class Example24Sub_PersonContentProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
         // TODO: Implement this to handle query requests from clients.
-        throw new UnsupportedOperationException("Not yet implemented");
+        Log.i("DBTest", "query()가 실행되었어요");
+        // 1 번째 인자 : table 명
+        // 2 번째 인자 : projection(select 에서 가져올 컬럼명을 문자배열로 표현)
+        // 3 번째 인자 : selection(where 절 조건을 명시)
+        // 4 번째 인자 : selection 의 IN Parameter 의 값
+        // 5 번째 인자 : Group by 절
+        // 6 번째 인자 : having 절
+        // 7 번째 인자 : 정렬 방법
+        Cursor cursor = database.query("person", projection, selection, selectionArgs, null, null, sortOrder);
+        return  cursor;
     }
 
     @Override

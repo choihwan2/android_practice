@@ -38,7 +38,7 @@
 
     </LinearLayout>
     <Button
-        android:id="@+id/empSelectBtn"
+        android:id="@+id/_24_empSelectBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="모든 사람 출력"/>

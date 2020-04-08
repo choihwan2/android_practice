@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /*
@@ -47,13 +49,41 @@ public class Example24_ContentProviderActivity extends AppCompatActivity {
                 String uriString = "content://com.exam.person.provider/person";
                 Uri uri = new Uri.Builder().build().parse(uriString);
                 ContentValues values = new ContentValues(); //HashMap 형태의 데이터베이스에 입력할 데이터를 저장.
-                values.put("name","홍길동");
-                values.put("age",20);
-                values.put("mobile","010-2715-1400");
+                values.put("name", "홍길동");
+                values.put("age", 20);
+                values.put("mobile", "010-2715-1400");
 
                 // getContentResolver() => ContentProvider 를 찾아서 그안에있는 insert() 메소드를 호출함.
-                getContentResolver().insert(uri,values);
-                Log.i("DBTest","데이터가 입력되었습니다.");
+                getContentResolver().insert(uri, values);
+                Log.i("DBTest", "데이터가 입력되었습니다.");
+            }
+        });
+        final TextView resultTv = findViewById(R.id._24_resultTv);
+        Button _24_selectBtn = findViewById(R.id._24_empSelectBtn);
+        _24_selectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("DBTest", "Select 버튼 클릭!");
+                //1. DB 처리 기능을 제공하는 Content Provider 를 찾아야 해요!
+                // Content Provider 를 찾기 위한 URI 가 있어야해요!
+                String uriString = "content://com.exam.person.provider/person";
+                Uri uri = new Uri.Builder().build().parse(uriString);
+
+                // 2. Uri 를 이용해서 Content Provider 를 찾아서 특징 method 를 호출
+                // column 을 표현하기 위한 String[] 을 생성해요!
+                // "select name, age, mobile from person where ~~"
+                String[] columns = new String[]{"name", "age", "mobile"};
+//                getContentResolver().query(uri, "어떻게 select 를 할건지..","조건","조건에 대한 argument","정렬방향");
+                Cursor cursor = getContentResolver().query(uri,columns,null,null,"name ASC");
+                // 성공 하면 Database table 에서 결과 record 의 집합을 가져와요!
+                while (cursor.moveToNext()){
+                    String name = cursor.getString(0);
+                    int age = cursor.getInt(1);
+                    String mobile = cursor.getString(2);
+
+                    String result = "record => " + name + ", " + age + ", " + mobile;
+                    resultTv.append(result + "\n");
+                }
             }
         });
     }

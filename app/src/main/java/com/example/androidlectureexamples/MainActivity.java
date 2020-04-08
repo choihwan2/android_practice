@@ -328,6 +328,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn25 = findViewById(R.id._25_Btn);
+        btn25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example25_PhoneAdressActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
