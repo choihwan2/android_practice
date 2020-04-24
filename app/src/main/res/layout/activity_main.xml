@@ -152,5 +152,11 @@
             android:layout_height="wrap_content"
             android:text="25. Get Phone Address Activity"
             android:id="@+id/_25_Btn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="26. Arduino Network Activity"
+            android:id="@+id/_26_Btn"/>
     </LinearLayout>
 </ScrollView>

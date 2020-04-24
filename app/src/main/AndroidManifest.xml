@@ -4,8 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <permission
         android:name="com.exam.person.provider.READ_DATABASE"
@@ -22,7 +22,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Example25_PhoneAdressActivity"></activity>
+        <service
+            android:name=".Example26Sub_ArduinoNetworkService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".Example26_ArduinoNetworkActivity" />
+        <activity android:name=".Example25_PhoneAdressActivity" />
 
         <provider
             android:name=".Example24Sub_PersonContentProvider"
