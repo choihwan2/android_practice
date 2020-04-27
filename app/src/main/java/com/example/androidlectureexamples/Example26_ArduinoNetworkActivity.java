@@ -25,14 +25,14 @@ class SharedMsg {
 
     }
 
-    public void addMsg(String msg) {
+    void addMsg(String msg) {
         synchronized (MONITER) {
             msg_q.add(msg);
             MONITER.notify();
         }
     }
 
-    public String popMsg() {
+    String popMsg() {
         String msg = null;
         synchronized (MONITER) {
             while (msg_q.isEmpty()) {
@@ -48,7 +48,7 @@ class SharedMsg {
         return msg;
     }
 
-    public static SharedMsg getInstance() {
+    static SharedMsg getInstance() {
         return instance;
     }
 }
@@ -91,7 +91,7 @@ class ArduinoRunnable implements Runnable{
     private PrintWriter pw;
     private SharedMsg sharedObj;
 
-    public ArduinoRunnable(SharedMsg msg) {
+    ArduinoRunnable(SharedMsg msg) {
         this.sharedObj = msg;
     }
 
