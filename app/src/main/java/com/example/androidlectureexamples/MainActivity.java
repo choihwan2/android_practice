@@ -346,6 +346,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn27 = findViewById(R.id._26_Btn);
+        btn26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Example26_ArduinoNetworkActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

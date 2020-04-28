@@ -7,6 +7,13 @@
     tools:context=".Example26_ArduinoNetworkActivity"
     android:orientation="vertical"
     android:padding="40dp">
+
+    <TextView
+        android:id="@+id/arduino_led_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LED의 상태"
+        android:textSize="24dp"/>
     <Button
         android:id="@+id/btn_led_on"
         android:layout_width="match_parent"

@@ -22,10 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Example27_ArduinoAnalogLEDActivity"></activity>
+
         <service
             android:name=".Example26Sub_ArduinoNetworkService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".Example26_ArduinoNetworkActivity" />
         <activity android:name=".Example25_PhoneAdressActivity" />
